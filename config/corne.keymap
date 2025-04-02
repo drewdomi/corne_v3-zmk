@@ -17,10 +17,10 @@
 
         root {
             bindings = <
-&kp TAB                  &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y    &kp U        &kp I          &kp O    &kp P          &kp BACKSPACE
-&kp LCTRL                &kp A  &kp S  &kp D         &kp F        &kp G         &kp H    &kp J        &kp K          &kp L    &kp SEMICOLON  &kp SQT
-&mt LEFT_SHIFT CAPSLOCK  &kp Z  &kp X  &kp C         &kp V        &kp B         &lt 3 N  &kp M        &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-                                       &kp LEFT_GUI  &lt 2 SPACE  &kp LEFT_ALT  &kp RET  &lt 1 SPACE  &kp RIGHT_ALT
+&kp TAB                  &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y        &kp U        &kp I          &kp O    &kp P          &kp BACKSPACE
+&kp LCTRL                &kp A  &kp S  &kp D         &kp F        &kp G         &kp H        &kp J        &kp K          &kp L    &kp SEMICOLON  &kp SQT
+&mt LEFT_SHIFT CAPSLOCK  &kp Z  &kp X  &kp C         &kp V        &kp B         &kp N        &kp M        &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+                                       &kp LEFT_GUI  &lt 2 SPACE  &kp LEFT_ALT  &lt 3 ENTER  &lt 1 SPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -35,10 +35,10 @@
 
         upper {
             bindings = <
-&kp ESCAPE  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5  &kp F6                             &kp F7           &kp F8           &kp F9           &kp F10  &kp DELETE
-&trans      &trans        &trans        &trans        &trans  &trans  &rgb_ug RGB_TOG                    &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &kp F11  &rgb_ug RGB_BRI
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &rgb_ug RGB_COLOR_HSB(279,100,50)  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &kp F12  &rgb_ug RGB_BRD
-                                        &trans        &trans  &trans  &trans                             &trans           &trans
+&kp ESCAPE  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5  &kp F6                            &kp F7           &kp F8           &kp F9           &kp F10  &kp DELETE
+&trans      &trans        &trans        &trans        &trans  &trans  &rgb_ug RGB_TOG                   &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &kp F11  &rgb_ug RGB_BRI
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &rgb_ug RGB_COLOR_HSB(279,0,100)  &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &kp F12  &rgb_ug RGB_BRD
+                                        &trans        &trans  &trans  &trans                            &trans           &trans
             >;
         };
 
