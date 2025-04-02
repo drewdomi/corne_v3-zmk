@@ -60,15 +60,26 @@
         };
     };
 
+    behaviors {
+        caps_tap_dance: caps_tap_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_TAP_DANCE";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+
+            tapping-term-ms = <300>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         root {
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y    &kp U        &kp I       &kp O    &kp P          &kp BACKSPACE
-&kp LCTRL  &kp A  &kp S  &kp D         &kp F        &kp G         &kp H    &kp J        &kp K       &kp L    &kp SEMICOLON  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C         &kp V        &kp B         &kp N    &kp M        &kp COMMA   &kp DOT  &kp FSLH       &kp RIGHT_ALT
-                         &kp LEFT_GUI  &lt 2 SPACE  &kp LEFT_ALT  &kp RET  &lt 1 SPACE  &kp ESCAPE
+&kp TAB          &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y    &kp U        &kp I          &kp O    &kp P          &kp BACKSPACE
+&kp LCTRL        &kp A  &kp S  &kp D         &kp F        &kp G         &kp H    &kp J        &kp K          &kp L    &kp SEMICOLON  &kp SQT
+&caps_tap_dance  &kp Z  &kp X  &kp C         &kp V        &kp B         &kp N    &kp M        &kp COMMA      &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+                               &kp LEFT_GUI  &lt 2 SPACE  &kp LEFT_ALT  &kp RET  &lt 1 SPACE  &kp RIGHT_ALT
             >;
         };
 
@@ -83,14 +94,14 @@
 
         upper {
             bindings = <
-&kp ESCAPE  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5  &kp F6           &kp F7           &kp F8           &kp F9  &kp F10  &kp DELETE
-&trans      &trans        &trans        &trans        &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_SAD  &rgb_ug RGB_HUI  &trans  &kp F11  &none
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans           &rgb_ug RGB_EFR  &rgb_ug RGB_EFF  &trans  &kp F12  &none
+&kp ESCAPE  &kp F1        &kp F2        &kp F3        &kp F4  &kp F5  &kp F6           &kp F7           &kp F8           &kp F9           &kp F10  &kp DELETE
+&trans      &trans        &trans        &trans        &trans  &trans  &rgb_ug RGB_TOG  &rgb_ug RGB_SAI  &rgb_ug RGB_HUI  &rgb_ug RGB_EFF  &kp F11  &none
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans  &trans           &rgb_ug RGB_SAD  &rgb_ug RGB_HUD  &rgb_ug RGB_EFR  &kp F12  &none
                                         &trans        &trans  &trans  &trans           &trans           &trans
             >;
         };
 
-        layer_3 {
+        extras {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
