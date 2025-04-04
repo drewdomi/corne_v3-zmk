@@ -16,7 +16,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        root {
+        base {
             bindings = <
 &kp TAB                  &kp Q  &kp W  &kp E         &kp R        &kp T         &kp Y        &kp U        &kp I          &kp O    &kp P          &kp BACKSPACE
 &kp LCTRL                &kp A  &kp S  &kp D         &kp F        &kp G         &kp H        &kp J        &kp K          &kp L    &kp SEMICOLON  &kp SQT
@@ -27,28 +27,28 @@
 
         lower {
             bindings = <
-&kp ESCAPE        &kp N1  &kp N2  &kp N3  &kp N4  &kp N5        &kp N6            &kp N7             &kp N8         &kp N9     &kp N0     &kp BACKSPACE
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans        &trans            &trans             &trans         &kp MINUS  &kp EQUAL  &kp ENTER
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans        &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp GRAVE  &trans     &kp RIGHT_SHIFT
-                                  &trans  &trans  &kp LEFT_ALT  &trans            &trans             &kp RIGHT_ALT
+&kp ESCAPE        &kp N1           &kp N2       &kp N3        &kp N4      &kp N5        &kp N6            &kp N7             &kp N8         &kp N9                &kp N0                 &kp BACKSPACE
+&kp LEFT_CONTROL  &kp EXCLAMATION  &kp AT_SIGN  &kp POUND     &kp DOLLAR  &kp PERCENT   &kp CARET         &kp AMPERSAND      &kp ASTERISK   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp ENTER
+&kp LEFT_SHIFT    &kp GRAVE        &none        &none         &none       &none         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH  &kp MINUS             &kp EQUAL              &kp RIGHT_SHIFT
+                                                &kp LEFT_GUI  &none       &kp LEFT_ALT  &none             &none              &kp RIGHT_ALT
             >;
         };
 
         upper {
             bindings = <
-&kp ESCAPE        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5        &kp F6          &kp F7          &kp F8         &kp F9           &kp F10  &kp DELETE
-&kp LEFT_CONTROL  &trans  &trans  &trans  &trans  &trans        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &trans   &kp F11
-&kp LEFT_SHIFT    &trans  &trans  &trans  &trans  &trans        &trans          &trans          &trans         &trans           &trans   &kp F12
-                                  &trans  &trans  &kp LEFT_ALT  &trans          &trans          &kp RIGHT_ALT
+&kp ESCAPE        &kp F1         &kp F2     &kp F3      &kp F4       &kp F5        &kp F6          &kp F7          &kp F8         &kp F9           &kp F10  &kp DELETE
+&kp LEFT_CONTROL  &kp PAGE_UP    &none      &none       &none        &kp HOME      &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW   &kp RIGHT_ARROW  &none    &kp F11
+&kp LEFT_SHIFT    &kp PAGE_DOWN  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp END       &none           &none           &none          &none            &none    &kp F12
+                                            &none       &none        &kp LEFT_ALT  &none           &none           &kp RIGHT_ALT
             >;
         };
 
         extras {
             bindings = <
-&kp C_MUTE         &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &trans           &trans           &bt BT_CLR
-&trans             &trans      &trans      &trans    &trans             &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(265,96,41)
-&ext_power EP_TOG  &trans      &trans      &trans    &trans             &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
-                                           &trans    &trans             &trans        &trans           &trans           &trans
+&kp C_MUTE         &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &none            &none            &bt BT_CLR
+&none              &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(265,86,45)
+&ext_power EP_TOG  &none       &none       &none     &none              &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
+                                           &none     &none              &none         &none            &none            &none
             >;
         };
     };
