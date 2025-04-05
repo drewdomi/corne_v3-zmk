@@ -5,6 +5,27 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+
+     behaviors {
+        home_pgup: home_pgup {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_PGUP";
+            #binding-cells = <0>;
+            bindings = <&kp HOME>, <&kp PG_UP>;
+            // When shift is held, switch to PG_UP
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        end_pgdn: end_pgdn {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_PGDN";
+            #binding-cells = <0>;
+            bindings = <&kp END>, <&kp PG_DN>;
+            // When shift is held, switch to PG_DN
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -28,17 +49,17 @@
 
         upper {
             bindings = <
-&kp ESCAPE        &kp F1         &kp F2     &kp F3      &kp F4       &kp F5    &kp F6          &kp F7          &kp F8        &kp F9           &kp F10  &kp DELETE
-&kp LEFT_CONTROL  &kp PAGE_UP    &none      &none       &none        &kp HOME  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none    &kp F11
-&kp LEFT_SHIFT    &kp PAGE_DOWN  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &kp END   &none           &none           &none         &none            &none    &kp F12
-                                            &none       &none        &none     &none           &none           &none
+&kp ESCAPE        &kp F1            &kp F2     &kp F3      &kp F4       &kp F5         &kp F6          &kp F7          &kp F8        &kp F9           &kp F10          &kp DELETE
+&kp LEFT_CONTROL  &none             &none      &none       &none        &home_pgup     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT_ARROW  &none            &kp F11
+&kp LEFT_SHIFT    &kp LEFT_ALT      &kp K_CUT  &kp K_COPY  &kp K_PASTE  &end_pgdn      &none           &none           &none         &none            &kp RIGHT_ALT    &kp F12
+                                               &none       &none        &none          &none           &none           &none
             >;
         };
 
         extras {
             bindings = <
 &kp C_MUTE         &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &none            &none            &bt BT_CLR
-&none              &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &rgb_ug RGB_COLOR_HSB(265,86,45)
+&none              &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none
 &ext_power EP_TOG  &none       &sys_reset  &none     &none              &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
                                            &none     &none              &none         &none            &none            &none
             >;
