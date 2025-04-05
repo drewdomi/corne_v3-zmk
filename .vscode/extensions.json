@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "spadin.zmk-tools",
+    "editorconfig.editorconfig",
+    "shd101wyy.markdown-preview-enhanced",
+    "redhat.vscode-xml",
+    "redhat.vscode-yaml"
+  ]
+}
