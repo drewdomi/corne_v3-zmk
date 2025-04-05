@@ -1,0 +1,5 @@
+{
+  "editor.defaultFormatter": "EditorConfig.EditorConfig",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true
+}

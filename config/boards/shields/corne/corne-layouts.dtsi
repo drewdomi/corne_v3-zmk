@@ -53,7 +53,7 @@
             , <&key_physical_attrs 100 100 1010  340       0     0     0>
             ;
     };
- 
+
     corne_position_map {
         compatible = "zmk,physical-layout-position-map";
 
