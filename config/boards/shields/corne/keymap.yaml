@@ -1,0 +1,174 @@
+layout: {zmk_keyboard: corne}
+layers:
+  base:
+  - TAB
+  - Q
+  - W
+  - E
+  - R
+  - T
+  - Y
+  - U
+  - I
+  - O
+  - P
+  - BACKSPACE
+  - LCTRL
+  - {t: A, h: LEFT GUI}
+  - {t: S, h: LEFT ALT}
+  - {t: D, h: LCTRL}
+  - {t: F, h: LEFT SHIFT}
+  - G
+  - H
+  - {t: J, h: RSHIFT}
+  - {t: K, h: RCTRL}
+  - {t: L, h: RIGHT ALT}
+  - {t: ;, h: RGUI}
+  - ''''
+  - {t: CAPSLOCK, h: LEFT SHIFT}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - N
+  - M
+  - ','
+  - .
+  - /
+  - RIGHT SHIFT
+  - LEFT GUI
+  - {t: SPACE, h: upper}
+  - {t: ENTER, h: lower}
+  - {t: ENTER, h: upper}
+  - {t: SPACE, h: lower}
+  - extras
+  lower:
+  - ESCAPE
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - BACKSPACE
+  - LEFT CONTROL
+  - '!'
+  - '@'
+  - '#'
+  - $
+  - '%'
+  - ^
+  - '&'
+  - '*'
+  - (
+  - )
+  - ENTER
+  - LEFT SHIFT
+  - '`'
+  - ''
+  - ''
+  - ''
+  - ''
+  - '['
+  - ']'
+  - \
+  - '-'
+  - '='
+  - RIGHT SHIFT
+  - LEFT GUI
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  upper:
+  - ESCAPE
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - DELETE
+  - LEFT CONTROL
+  - ''
+  - ''
+  - ''
+  - ''
+  - {t: HOME, s: PG UP}
+  - LEFT ARROW
+  - DOWN ARROW
+  - UP ARROW
+  - RIGHT ARROW
+  - ''
+  - F11
+  - LEFT SHIFT
+  - ''
+  - CUT
+  - COPY
+  - PASTE
+  - {t: END, s: PG DN}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - F12
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  extras:
+  - MUTE
+  - PREV
+  - NEXT
+  - PP
+  - VOLUME DOWN
+  - VOL UP
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - ''
+  - '&sys_reset'
+  - BT CLR
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BRI UP
+  - RGB BRI
+  - RGB HUI
+  - RGB SAI
+  - RGB SPI
+  - RGB EFF
+  - ''
+  - EP TOG
+  - ''
+  - '&sys_reset'
+  - ''
+  - ''
+  - BRI DN
+  - RGB BRD
+  - RGB HUD
+  - RGB SAD
+  - RGB SPD
+  - RGB EFR
+  - RGB TOG
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - {type: held}
