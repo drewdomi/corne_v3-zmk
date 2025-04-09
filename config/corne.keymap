@@ -5,6 +5,16 @@
 #include <dt-bindings/zmk/rgb.h>
 
 / {
+    // Define a global variable to track homerow mods state
+    global-vars {
+        HR_MODS_ENABLED: hr_mods_enabled {
+            compatible = "zmk,global-var";
+            status = "okay";
+            type = "bool";
+            value = <1>; // Default to enabled (1)
+        };
+    };
+
     behaviors {
         home_pgup: home_pgup {
             compatible = "zmk,behavior-mod-morph";
@@ -13,7 +23,6 @@
             bindings = <&kp HOME>, <&kp PG_UP>;
 
             // When shift is held, switch to PG_UP
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -24,7 +33,6 @@
             bindings = <&kp END>, <&kp PG_DN>;
 
             // When shift is held, switch to PG_DN
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -37,8 +45,41 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
 
-            quick-tap-ms = <180>;
+            // Use this property to check if homerow mods are enabled
             global-quick-tap;
+            quick-tap-ms = <180>;
+
+            hold-trigger-key-positions = <MACRO_PLACEHOLDER>;
+            hold-trigger-on-release;
+
+            // Add a condition to check our global variable
+            // If hr_mods_enabled is false (0), only use the tap behavior
+            #define HR_MODS_ENABLED_CHECK(mod, tap) \
+                (HR_MODS_ENABLED ? &kp mod : &kp tap)
+
+            // Custom behavior using global variable
+            // When called with &hm LCTRL A, it will output either LCTRL or A based on HR_MODS_ENABLED
+            #binding-cells = <2>;
+            bindings = <HR_MODS_ENABLED_CHECK(ARG1, ARG2)>;
+        };
+
+        // Toggle behavior for homerow mods
+        hm_toggle: homerow_mods_toggle {
+            compatible = "zmk,behavior-macro";
+            label = "HOMEROW_MODS_TOGGLE";
+            #binding-cells = <0>;
+            bindings = <&macro_tap>, <&macro_param_1to1>, <&to 0>;
+
+            // This will toggle the HR_MODS_ENABLED global variable
+            // between 0 (disabled) and 1 (enabled)
+            hrm_toggle: hrm_toggle {
+                compatible = "zmk,behavior-macro";
+                #binding-cells = <0>;
+                bindings
+                    = <&macro_tap &macro_get_global HR_MODS_ENABLED>
+                    , <&macro_tap &macro_not>
+                    , <&macro_tap &macro_set_global HR_MODS_ENABLED>;
+            };
         };
     };
 
@@ -75,7 +116,7 @@
         extras {
             bindings = <
 &kp C_MUTE         &kp C_PREV  &kp C_NEXT  &kp C_PP  &kp C_VOLUME_DOWN  &kp C_VOL_UP  &bt BT_SEL 0     &bt BT_SEL 1     &bt BT_SEL 2     &none            &sys_reset       &bt BT_CLR
-&none              &none       &none       &none     &none              &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none
+&none              &none       &none       &none     &hm_toggle         &kp C_BRI_UP  &rgb_ug RGB_BRI  &rgb_ug RGB_HUI  &rgb_ug RGB_SAI  &rgb_ug RGB_SPI  &rgb_ug RGB_EFF  &none
 &ext_power EP_TOG  &none       &sys_reset  &none     &none              &kp C_BRI_DN  &rgb_ug RGB_BRD  &rgb_ug RGB_HUD  &rgb_ug RGB_SAD  &rgb_ug RGB_SPD  &rgb_ug RGB_EFR  &rgb_ug RGB_TOG
                                            &none     &none              &none         &none            &none            &none
             >;
