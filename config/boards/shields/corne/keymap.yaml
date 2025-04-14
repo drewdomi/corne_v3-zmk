@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
   base:
-  - TAB
+  - '&tab_esc'
   - Q
   - W
   - E
@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - LEFT GUI
+  - {t: LEFT GUI, h: extras}
   - {t: SPACE, h: upper}
-  - {t: ENTER, h: lower}
+  - {t: DELETE, h: lower}
   - {t: ENTER, h: upper}
   - {t: SPACE, h: lower}
-  - extras
+  - {t: RIGHT ALT, h: extras}
   lower:
   - ESCAPE
   - '1'
@@ -72,15 +72,15 @@ layers:
   - '`'
   - ''
   - ''
-  - ''
-  - ''
+  - +
+  - _
   - '['
   - ']'
   - \
   - '-'
   - '='
   - RIGHT SHIFT
-  - LEFT GUI
+  - ''
   - ''
   - {type: held}
   - ''
@@ -104,7 +104,7 @@ layers:
   - ''
   - ''
   - ''
-  - {t: HOME, s: PG UP}
+  - PRINTSCREEN
   - LEFT ARROW
   - DOWN ARROW
   - UP ARROW
@@ -116,11 +116,11 @@ layers:
   - CUT
   - COPY
   - PASTE
-  - {t: END, s: PG DN}
   - ''
-  - ''
-  - ''
-  - ''
+  - HOME
+  - PAGE DOWN
+  - PAGE UP
+  - END
   - ''
   - F12
   - ''
@@ -130,7 +130,7 @@ layers:
   - ''
   - ''
   extras:
-  - MUTE
+  - ''
   - PREV
   - NEXT
   - PP
@@ -140,9 +140,9 @@ layers:
   - {t: BT, h: '1'}
   - {t: BT, h: '2'}
   - ''
-  - '&sys_reset'
-  - BT CLR
   - ''
+  - BT CLR
+  - '&sys_reset'
   - ''
   - ''
   - ''
@@ -153,10 +153,10 @@ layers:
   - RGB SAI
   - RGB SPI
   - RGB EFF
-  - ''
+  - '&sys_reset'
   - EP TOG
   - ''
-  - '&sys_reset'
+  - ''
   - ''
   - ''
   - BRI DN
@@ -166,9 +166,9 @@ layers:
   - RGB SPD
   - RGB EFR
   - RGB TOG
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
   - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
