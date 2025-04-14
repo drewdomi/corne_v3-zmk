@@ -37,12 +37,12 @@ layers:
   - .
   - /
   - RIGHT SHIFT
-  - {t: LEFT GUI, h: extras}
+  - LEFT GUI
   - {t: SPACE, h: upper}
-  - {t: DELETE, h: lower}
+  - {t: DELETE, h: extras}
   - {t: ENTER, h: upper}
   - {t: SPACE, h: lower}
-  - {t: RIGHT ALT, h: extras}
+  - RIGHT ALT
   lower:
   - ESCAPE
   - '1'
@@ -55,7 +55,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - BACKSPACE
+  - '`'
   - LEFT CONTROL
   - '!'
   - '@'
@@ -69,11 +69,11 @@ layers:
   - )
   - ENTER
   - LEFT SHIFT
-  - '`'
-  - ''
-  - ''
   - +
   - _
+  - '|'
+  - '{'
+  - '}'
   - '['
   - ']'
   - \
@@ -82,9 +82,9 @@ layers:
   - RIGHT SHIFT
   - ''
   - ''
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
   - ''
   upper:
   - ESCAPE
@@ -166,9 +166,9 @@ layers:
   - RGB SPD
   - RGB EFR
   - RGB TOG
+  - ''
+  - ''
   - {type: held}
-  - ''
-  - ''
   - ''
   - ''
   - ''

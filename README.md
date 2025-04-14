@@ -6,15 +6,15 @@ This board is based on a popular split keyboard PCB shape called the Corne ([git
 
 #### Components
 
-- `MCU`: nice!nano v2 _compatible board_ (wireless)
-- `PCB`: Standard [v3.0.1 Cherry-Corne](https://github.com/foostan/crkbd/blob/main/docs/corne-cherry/v3/buildguide_en.md) designs
-- `Case`: Corne v3 compatible case
-- `OLED`: 0.91" 128x32 I2C white OLEDS
-- `Batteries`: 110mah Lipo
-- `Sockets`: Hotswap sockets
-- `Diodes`: 1N4148W SMD Diode SOD-123
-- `Switches`: [Akko V3 Lavender Purple Pro](https://en.akkogear.com/product/akko-v3-lavender-purple-pro-switch-45pcs) | Tactile
-- `Keycaps`: PBT Blank Keycap 1U
+-   `MCU`: nice!nano v2 _compatible board_ (wireless)
+-   `PCB`: Standard [v3.0.1 Cherry-Corne](https://github.com/foostan/crkbd/blob/main/docs/corne-cherry/v3/buildguide_en.md) designs
+-   `Case`: Corne v3 compatible case
+-   `OLED`: 0.91" 128x32 I2C white OLEDS
+-   `Batteries`: 110mah Lipo
+-   `Sockets`: Hotswap sockets
+-   `Diodes`: 1N4148W SMD Diode SOD-123
+-   `Switches`: [Akko V3 Lavender Purple Pro](https://en.akkogear.com/product/akko-v3-lavender-purple-pro-switch-45pcs) | Tactile
+-   `Keycaps`: PBT Blank Keycap 1U
 
 #### Software
 
@@ -26,7 +26,7 @@ MCU's flashed with official [ZMK firmware](https://github.com/zmkfirmware/zmk)
 
 ## Images
 
-|           Corne v3            |               .               |
+|           Corne v3            |            Photos             |
 | :---------------------------: | :---------------------------: |
 | ![Photo 1](assets/photo1.jpg) | ![Photo 2](assets/photo3.jpg) |
 | ![Photo 3](assets/photo2.jpg) | ![Photo 4](assets/photo4.jpg) |

@@ -1,5 +1,8 @@
 {
   "editor.defaultFormatter": "EditorConfig.EditorConfig",
   "editor.formatOnPaste": true,
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
