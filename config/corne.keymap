@@ -4,8 +4,21 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 
+// TAP_DANCE settings
+#define TAP_SPEED 200  // Define a value in milliseconds for the tap speed
+
+#define TD_TAB    &td0 // TAB ESC
+
 / {
     behaviors {
+        td0: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_0";
+            #binding-cells = <0>;
+            tapping-term-ms = <TAP_SPEED>;
+            bindings = <&kp TAB>, <&kp ESC>;
+        };
+
         home_pgup: home_pgup {
             compatible = "zmk,behavior-mod-morph";
             label = "HOME_PGUP";
@@ -13,7 +26,6 @@
             bindings = <&kp HOME>, <&kp PG_UP>;
 
             // When shift is held, switch to PG_UP
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -24,7 +36,6 @@
             bindings = <&kp END>, <&kp PG_DN>;
 
             // When shift is held, switch to PG_DN
-
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -33,11 +44,9 @@
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
             tapping-term-ms = <175>;
-            quick_tap_ms = <0>;
+            quick_tap_ms = <180>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-
-            quick-tap-ms = <180>;
             global-quick-tap;
         };
     };
@@ -47,7 +56,7 @@
 
         base {
             bindings = <
-&kp TAB                  &kp Q           &kp W           &kp E        &kp R             &kp T            &kp Y        &kp U         &kp I        &kp O            &kp P               &kp BACKSPACE
+TD_TAB                   &kp Q           &kp W           &kp E        &kp R             &kp T            &kp Y        &kp U         &kp I        &kp O            &kp P               &kp BACKSPACE
 &kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D  &hm LEFT_SHIFT F  &kp G            &kp H        &hm RSHIFT J  &hm RCTRL K  &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
 &mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C        &kp V             &kp B            &kp N        &kp M         &kp COMMA    &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
                                                          &mo 3        &lt 2 SPACE       &lt 1 BACKSPACE  &lt 2 ENTER  &lt 1 SPACE   &mo 3
