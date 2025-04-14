@@ -55,7 +55,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - '`'
+  - BACKSPACE
   - LEFT CONTROL
   - '!'
   - '@'
@@ -67,7 +67,7 @@ layers:
   - '*'
   - (
   - )
-  - ENTER
+  - '`'
   - LEFT SHIFT
   - +
   - _
