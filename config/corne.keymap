@@ -32,10 +32,10 @@
 
         qwerty {
             bindings = <
-&tab_esc                 &kp Q           &kp W           &kp E         &kp R             &kp T            &kp Y        &kp U         &kp I          &kp O            &kp P               &kp GRAVE
-&kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D   &hm LEFT_SHIFT F  &kp G            &kp H        &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
-&mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C         &kp V             &kp B            &kp N        &kp M         &kp COMMA      &kp DOT          &kp FSLH            &mt RIGHT_SHIFT CAPS
-                                                         &kp LEFT_GUI  &lt 2 SPACE       &lt 3 BACKSPACE  &lt 2 ENTER  &lt 1 SPACE   &kp RIGHT_ALT
+&tab_esc                 &kp Q           &kp W           &kp E         &kp R             &kp T         &kp Y        &kp U         &kp I          &kp O            &kp P               &kp BACKSPACE
+&kp LCTRL                &hm LEFT_GUI A  &hm LEFT_ALT S  &hm LCTRL D   &hm LEFT_SHIFT F  &kp G         &kp H        &hm RSHIFT J  &hm RCTRL K    &hm RIGHT_ALT L  &hm RGUI SEMICOLON  &kp SQT
+&mt LEFT_SHIFT CAPSLOCK  &kp Z           &kp X           &kp C         &kp V             &kp B         &kp N        &kp M         &kp COMMA      &kp DOT          &kp FSLH            &kp RIGHT_SHIFT
+                                                         &kp LEFT_GUI  &lt 2 SPACE       &lt 3 DELETE  &lt 2 ENTER  &lt 1 SPACE   &kp RIGHT_ALT
             >;
         };
 
@@ -68,10 +68,10 @@
 
         colemak {
             bindings = <
-&trans  &trans          &trans          &kp F               &kp P             &kp G            &kp J   &kp L              &kp U                &kp Y            &kp SEMICOLON    &trans
-&trans  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D            &trans  &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &trans
-&trans  &trans          &trans          &trans              &trans            &trans           &kp K   &kp M              &trans               &trans           &trans           &trans
-                                        &trans              &trans            &lt 3 BACKSPACE  &trans  &trans             &trans
+&trans  &kp Q           &kp W           &kp F               &kp P             &kp G   &kp J   &kp L              &kp U                &kp Y            &kp SEMICOLON    &trans
+&trans  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D   &kp H   &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &trans
+&trans  &kp Z           &kp X           &kp C               &kp V             &kp B   &kp K   &kp M              &trans               &trans           &trans           &trans
+                                        &trans              &trans            &trans  &trans  &trans             &trans
             >;
         };
     };
