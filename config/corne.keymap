@@ -18,11 +18,10 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
             #binding-cells = <2>;
-            tapping-term-ms = <175>;
+            tapping-term-ms = <225>;
             quick_tap_ms = <180>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
-
             global-quick-tap;
         };
     };
@@ -68,10 +67,10 @@
 
         colemak {
             bindings = <
-&trans  &kp Q           &kp W           &kp F               &kp P             &kp G         &kp J        &kp L              &kp U                &kp Y            &kp SEMICOLON    &trans
-&trans  &hm LEFT_GUI A  &hm LEFT_ALT R  &hm LEFT_CONTROL S  &hm LEFT_SHIFT T  &kp D         &kp H        &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &trans
-&trans  &kp Z           &kp X           &kp C               &kp V             &kp B         &kp K        &kp M              &trans               &trans           &trans           &trans
-                                        &kp LEFT_GUI        &lt 2 SPACE       &lt 3 DELETE  &lt 2 ENTER  &lt 1 SPACE        &kp RIGHT_ALT
+&tab_esc                &kp Q           &kp W               &kp F                   &kp P             &kp G         &kp J        &kp L              &kp U                &kp Y            &kp SEMICOLON    &kp BACKSPACE
+&kp LCTRL               &hm LEFT_GUI A  &hm LEFT_ALT R      &hm LEFT_CONTROL S      &hm LEFT_SHIFT T  &kp D         &kp H        &hm RIGHT_SHIFT N  &hm RIGHT_CONTROL E  &hm RIGHT_ALT I  &hm RIGHT_GUI O  &kp SQT
+&mt LEFT_SHIFT CAPSLOCK &kp Z           &kp X               &kp C                   &kp V             &kp B         &kp K        &kp M              &kp COMMA            &kp DOT          &kp FSLH         &kp RIGHT_SHIFT
+                                        &kp LEFT_GUI        &lt 2 SPACE             &lt 3 DELETE      &lt 2 ENTER   &lt 1 SPACE  &kp RIGHT_ALT
             >;
         };
     };
