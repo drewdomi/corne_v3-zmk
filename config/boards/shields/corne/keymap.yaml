@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne}
 layers:
-  base:
+  qwerty:
   - '&tab_esc'
   - Q
   - W
@@ -44,7 +44,7 @@ layers:
   - {t: SPACE, h: lower}
   - RIGHT ALT
   lower:
-  - ESCAPE
+  - TAB
   - '1'
   - '2'
   - '3'
@@ -156,8 +156,8 @@ layers:
   - '&sys_reset'
   - EP TOG
   - ''
-  - ''
-  - ''
+  - {t: qwerty, h: toggle}
+  - {t: colemak, h: toggle}
   - ''
   - BRI DN
   - RGB BRD
@@ -172,3 +172,46 @@ layers:
   - ''
   - ''
   - ''
+  colemak:
+  - {t: ▽, type: trans}
+  - Q
+  - W
+  - F
+  - P
+  - G
+  - J
+  - L
+  - U
+  - Y
+  - ;
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: A, h: LEFT GUI}
+  - {t: R, h: LEFT ALT}
+  - {t: S, h: LEFT CONTROL}
+  - {t: T, h: LEFT SHIFT}
+  - D
+  - H
+  - {t: N, h: RIGHT SHIFT}
+  - {t: E, h: RIGHT CONTROL}
+  - {t: I, h: RIGHT ALT}
+  - {t: O, h: RIGHT GUI}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Z
+  - X
+  - C
+  - V
+  - B
+  - K
+  - M
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - LEFT GUI
+  - {t: SPACE, h: upper}
+  - {t: DELETE, h: extras}
+  - {t: ENTER, h: upper}
+  - {t: SPACE, h: lower}
+  - RIGHT ALT
